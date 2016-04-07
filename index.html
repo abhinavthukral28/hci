@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script type="text/javascript" src="node_modules/lockr/lockr.min.js"></script>
+  <script type="text/javascript" src="js/storage.js"></script>
 
 </head>
 
@@ -20,7 +21,7 @@
   <nav class="red lighten-1" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">Dash</a>
-      <ul class="right hide-on-med-and-down">
+      <ul id="navId" class="right hide-on-med-and-down">
         <li><a href="#">Home</a></li>
         <li><a href="#">Scheduled Runs</a></li>
         <li><a href="#">Run Log</a></li>
@@ -80,8 +81,10 @@
       </div>
       <div class="col s6">
         <div class="card-panel center-align">
-          <i class="material-icons">directions_run</i>
-          <h5>Plan a Run</h5>
+          <a href="plan.html">
+             <i class="material-icons">directions_run</i>
+             <h5>Plan a Run</h5>
+          </a>
         </div>
       </div>
       <div class="col s6">
@@ -114,7 +117,7 @@
   <script src="js/init.js"></script>
   <script id="__bs_script__">
     //<![CDATA[
-    document.write("<script async src='http://HOST:8081/browser-sync/browser-sync-client.2.11.2.js'><\/script>".replace("HOST", location.hostname));
+    document.write("<script async src='https://HOST:8081/browser-sync/browser-sync-client.2.11.2.js'><\/script>".replace("HOST", location.hostname));
     //]]>
   </script>
 </body>

@@ -39,21 +39,10 @@
 .cal-panel {
     text-align: center;
 }
-a:link {
-    color: inherit;
+a{
+    color: black;
 }
 
-/* visited link */
-a:visited {
-    color: inherit;
-}
-
-/* mouse over link */
-a:hover {
-    color: inherit;
-}
-
-/* selected link */
-a:active {
-    color: inherit;
+.modal-header {
+    padding: 5px 10px;
 }
