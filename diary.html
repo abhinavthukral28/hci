@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <meta name="theme-color" content="#EF5350" />
 
-  <title>Starter Template - Materialize</title>
+  <title>Dash</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,10 +27,10 @@
       var mealName = $('#meal_name').val();
       addFood(mealName, calories, "Test");
       $("#today").empty();
+      Materialize.toast('Food item has been added.', 5000);
       updateFoods();
     }
     function updateTotalCalories(){
-      console.log(getTotalCalories());
       $('#total_calories').html(getTotalCalories());  
     }
     $(document).ready(function() {
@@ -46,8 +46,8 @@
       <a id="logo-container" href="#" class="brand-logo">Dash</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Scheduled Runs</a></li>
-        <li><a href="#">Run Log</a></li>
+        <li><a href="future.html">Scheduled Runs</a></li>
+        <li><a href="past.html">Run Log</a></li>
         <li><a href="diary.html">Food Diary</a></li>
         <li><a href="#">Settings</a></li>
       </ul>
@@ -68,9 +68,11 @@
           </div>
         </div>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Scheduled Runs</a></li>
-        <li><a href="#">Run Log</a></li>
+        <li><a href="future.html">Scheduled Runs</a></li>
+        <li><a href="past.html">Run Log</a></li>
         <li><a href="diary.html">Food Diary</a></li>
+        <li><a href="plan.html">Plan a Run</a></li>
+        <li><a href="goals.html">Goals & Progress</a></li>
         <li><a href="#">Settings</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -179,10 +181,6 @@
   
     </div>
   </div>
-
-  <footer class="page-footer red">
-  </footer>
-
 
   <!--  Scripts-->
   <script src="js/materialize.js"></script>
